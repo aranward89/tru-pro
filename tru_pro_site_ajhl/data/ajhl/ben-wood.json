@@ -1,0 +1,17 @@
+{
+  "name": "Ben Wood",
+  "position": null,
+  "birth_year": null,
+  "dob": null,
+  "nationality": null,
+  "team": "Mid Isle Matrix U18 AAA",
+  "stats": {
+    "games_played": 28,
+    "goals": 11,
+    "assists": 17,
+    "ppg": 1.0,
+    "league_adjusted_ppg": 1.4398,
+    "adjusted_ppg_diff": 0.4398
+  },
+  "league": "AJHL"
+}

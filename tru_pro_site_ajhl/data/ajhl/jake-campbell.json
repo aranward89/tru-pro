@@ -1,0 +1,17 @@
+{
+  "name": "Jake Campbell",
+  "position": null,
+  "birth_year": null,
+  "dob": null,
+  "nationality": null,
+  "team": "Mid Isle Matrix U18 AAA",
+  "stats": {
+    "games_played": 28,
+    "goals": 8,
+    "assists": 13,
+    "ppg": 0.75,
+    "league_adjusted_ppg": 1.0798,
+    "adjusted_ppg_diff": 0.3298
+  },
+  "league": "AJHL"
+}
