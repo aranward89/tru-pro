@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRU PRO | AJHL Scouting Dashboard</title>
+  <style>
+    body { font-family: sans-serif; background: #f4f4f4; padding: 2rem; }
+    .player-card { background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .player-name { font-size: 1.2rem; font-weight: bold; }
+    .player-team { color: gray; }
+    .stats { margin-top: 0.5rem; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>TRU PRO – AJHL Player Dashboard</h1>
+  <div id="player-list">Loading players...</div>
+
+  <script>
+    async function loadPlayers() {
+      const res = await fetch('./data/ajhl/index.json');
+      const players = await res.json();
+      const container = document.getElementById('player-list');
+      container.innerHTML = '';
+
+      for (const player of players) {
+        const card = document.createElement('div');
+        card.className = 'player-card';
+
+        card.innerHTML = `
+          <div class="player-name">${player.name}</div>
+          <div class="player-team">${player.team}</div>
+          <div class="stats"><a href="./data/ajhl/${player.slug}.json" target="_blank">View JSON</a></div>
+        `;
+
+        container.appendChild(card);
+      }
+    }
+
+    loadPlayers();
+  </script>
+</body>
+</html>
